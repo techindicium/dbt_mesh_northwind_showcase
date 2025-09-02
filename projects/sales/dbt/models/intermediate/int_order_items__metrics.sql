@@ -1,12 +1,12 @@
 with
     orders as (
         select *
-        from {{ ref('dbt_northwind_foundational', 'stg_erp__orders') }}
+        from {{ ref('dbt_nothwind_mesh_foundational', 'stg_erp__orders') }}
     )
 
     , order_items as (
         select *
-        from {{ ref('dbt_northwind_foundational', 'stg_erp__order_items') }}
+        from {{ ref('dbt_nothwind_mesh_foundational', 'stg_erp__order_items') }}
     )
 
     , joined as (

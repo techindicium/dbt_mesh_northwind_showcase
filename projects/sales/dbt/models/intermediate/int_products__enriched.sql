@@ -2,17 +2,17 @@ with
     -- call required staging models
     categories as (
         select *
-        from {{ ref('dbt_northwind_foundational', 'stg_erp__categories') }}
+        from {{ ref('dbt_nothwind_mesh_foundational', 'stg_erp__categories') }}
     )
 
     , suppliers as (
         select *
-        from {{ ref('dbt_northwind_foundational', 'stg_erp__suppliers') }}
+        from {{ ref('dbt_nothwind_mesh_foundational', 'stg_erp__suppliers') }}
     )
 
     , products as (
         select *
-        from {{ ref('dbt_northwind_foundational', 'stg_erp__products') }}
+        from {{ ref('dbt_nothwind_mesh_foundational', 'stg_erp__products') }}
     )
 
     , enrich_products as (
