@@ -2,7 +2,7 @@ with
     -- call required staging model
     employees as (
         select *
-        from {{ ref('stg_erp__employees') }}
+        from {{ ref('dbt_northwind_foundational', 'stg_erp__employees') }}
     )
 
     , self_joined as (
