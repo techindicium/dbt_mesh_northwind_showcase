@@ -1,7 +1,7 @@
 with
     stg_shippers as (
         select *
-        from {{ ref('stg_erp__shippers') }}
+        from {{ ref('dbt_northwind_foundational', 'stg_erp__shippers') }}
     )
 
 select *
