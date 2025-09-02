@@ -36,15 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  dbt_northwind:
-
-    intermediate:
-      +materialized: view
-      +schema: int
-
-    marts:
-      +materialized: table
-      +schema: marts
+  dbt_northwind_foundational:
 
     staging:
       +materialized: view

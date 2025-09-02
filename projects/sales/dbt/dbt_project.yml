@@ -36,7 +36,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  dbt_northwind:
+  dbt_northwind_sales:
 
     intermediate:
       +materialized: view
@@ -45,8 +45,3 @@ models:
     marts:
       +materialized: table
       +schema: marts
-
-    staging:
-      +materialized: view
-      +schema: stg
-      erp:
