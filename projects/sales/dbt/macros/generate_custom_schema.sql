@@ -2,18 +2,10 @@
 
     {%- set default_schema = target.schema -%}
     
-    {%- if target.name == 'prd' -%}
-    
-        {%- if custom_schema_name is none -%}
+    {%- if custom_schema_name is not none and target.name in ('prd') -%}
 
-            {{ default_schema }}
+        {{ custom_schema_name | trim }}
 
-        {%- else -%}
-
-            {{ custom_schema_name | trim }}
-
-        {%- endif -%}
-    
     {%- else -%}
 
         {{ default_schema }}
