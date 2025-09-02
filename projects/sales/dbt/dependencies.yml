@@ -4,4 +4,4 @@ packages:
 
 
 projects:
-  - name: dbt_northwind_foundational
+  - name: dbt_nothwind_mesh_foundational
