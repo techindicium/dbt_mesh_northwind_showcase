@@ -43,3 +43,4 @@ models:
       +schema: stg
       +access: public
       erp:
+        +tags: erp
