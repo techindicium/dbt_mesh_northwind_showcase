@@ -8,7 +8,7 @@ with
         select
             cast(id as int) as employee_pk
             , cast(reportsto as int) as manager_fk
-            , firstname || ' ' || lastname as employee_name
+            , cast((firstname || ' ' || lastname) as varchar) as employee_name
             , cast(title as varchar) as employee_title
             , cast(birthdate as date) as employee_birth_date
             , cast(hiredate as date) as employee_hire_date
