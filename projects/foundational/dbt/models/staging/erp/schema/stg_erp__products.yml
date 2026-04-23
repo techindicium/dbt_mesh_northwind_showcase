@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_erp__products
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: product_pk
+        data_type: int
+      - name: supplier_fk
+        data_type: int
+      - name: category_fk
+        data_type: int
+      - name: product_name
+        data_type: varchar
+      - name: quantity_per_unit
+        data_type: varchar
+      - name: unit_price
+        data_type: numeric(18,2)
+      - name: units_in_stock
+        data_type: int
+      - name: units_on_order
+        data_type: int
+      - name: reorder_level
+        data_type: int
+      - name: is_discontinued
+        data_type: boolean

@@ -7,8 +7,8 @@ with
     , renamed as (
         select
             cast(id as int) as category_pk
-            , cast(categoryname as string) as category_name
-            , cast(description as string) as category_description
+            , cast(categoryname as varchar) as category_name
+            , cast(description as varchar) as category_description
         from source_categories
     )
 

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_erp__shippers
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: shipper_pk
+        data_type: int
+      - name: shipper_name
+        data_type: varchar

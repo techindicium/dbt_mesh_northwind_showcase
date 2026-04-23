@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_erp__categories
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: category_pk
+        data_type: int
+      - name: category_name
+        data_type: varchar
+      - name: category_description
+        data_type: varchar

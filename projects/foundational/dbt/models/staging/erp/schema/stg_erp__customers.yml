@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_erp__customers
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: customer_pk
+        data_type: varchar
+      - name: customer_company_name
+        data_type: varchar
+      - name: customer_city
+        data_type: varchar
+      - name: customer_region
+        data_type: varchar
+      - name: customer_country
+        data_type: varchar

@@ -1,8 +1,8 @@
 sources:
   - name: erp
     description: Northwind sales system.
-    schema: RAW_NORTHWIND
-    database: MESH_RAW_DB
+    schema: raw_northwind
+    database: mesh_raw_db
     tables:
       - name: category
         description: Contains product category definitions such as name and description.
