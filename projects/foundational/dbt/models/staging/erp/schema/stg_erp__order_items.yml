@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_erp__order_items
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: order_item_sk
+        data_type: varchar
+      - name: order_fk
+        data_type: int
+      - name: product_fk
+        data_type: int
+      - name: discount_pct
+        data_type: numeric(18,2)
+      - name: unit_price
+        data_type: numeric(18,2)
+      - name: quantity
+        data_type: int

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_erp__suppliers
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: supplier_pk
+        data_type: int
+      - name: supplier_name
+        data_type: varchar
+      - name: supplier_city
+        data_type: varchar
+      - name: supplier_country
+        data_type: varchar

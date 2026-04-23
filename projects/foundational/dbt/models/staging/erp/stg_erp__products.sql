@@ -9,8 +9,8 @@ with
             cast(id as int) as product_pk
             , cast(supplierid as int) as supplier_fk
             , cast(categoryid as int) as category_fk
-            , cast(productname as string) as product_name
-            , cast(quantityperunit as string) as quantity_per_unit
+            , cast(productname as varchar) as product_name
+            , cast(quantityperunit as varchar) as quantity_per_unit
             , cast(unitprice as numeric(18,2)) as unit_price
             , cast(unitsinstock as int) as units_in_stock
             , cast(unitsonorder as int) as units_on_order

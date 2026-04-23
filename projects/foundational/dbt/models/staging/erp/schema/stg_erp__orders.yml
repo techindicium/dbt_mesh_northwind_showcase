@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_erp__orders
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: order_pk
+        data_type: int
+      - name: employee_fk
+        data_type: int
+      - name: customer_fk
+        data_type: varchar
+      - name: shipper_fk
+        data_type: int
+      - name: order_number
+        data_type: int
+      - name: order_date
+        data_type: date
+      - name: ship_date
+        data_type: date
+      - name: required_delivery_date
+        data_type: date
+      - name: freight
+        data_type: numeric
+      - name: recipient_name
+        data_type: varchar
+      - name: recipient_city
+        data_type: varchar
+      - name: recipient_region
+        data_type: varchar
+      - name: recipient_country
+        data_type: varchar

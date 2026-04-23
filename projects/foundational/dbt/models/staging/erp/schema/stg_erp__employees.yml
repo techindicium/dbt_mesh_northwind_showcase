@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_erp__employees
+    latest_version: 1
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: employee_pk
+        data_type: int
+      - name: manager_fk
+        data_type: int
+      - name: employee_name
+        data_type: varchar
+      - name: employee_title
+        data_type: varchar
+      - name: employee_birth_date
+        data_type: date
+      - name: employee_hire_date
+        data_type: date
+      - name: employee_city
+        data_type: varchar
+      - name: employee_region
+        data_type: varchar
+      - name: employee_country
+        data_type: varchar
+    versions:
+      - v: 1
+        deprecation_date: "2026-11-30"
+      - v: 2
+        columns:
+          - name: employee_pk
+            data_type: int
+          - name: manager_fk
+            data_type: int
+          - name: employee_first_name
+            data_type: varchar
+          - name: employee_last_name
+            data_type: varchar
+          - name: employee_title
+            data_type: varchar
+          - name: employee_birth_date
+            data_type: date
+          - name: employee_hire_date
+            data_type: date
+          - name: employee_city
+            data_type: varchar
+          - name: employee_region
+            data_type: varchar
+          - name: employee_country
+            data_type: varchar
