@@ -14,7 +14,7 @@ with
             , cast(orderdate as date) as order_date
             , cast(shippeddate as date) as ship_date
             , cast(requireddate as date) as required_delivery_date
-            , cast(freight as numeric) as freight
+            , cast(freight as numeric(18,2)) as freight
             , cast(shipname as varchar) as recipient_name
             , cast(shipcity as varchar) as recipient_city
             , cast(shipregion as varchar) as recipient_region
