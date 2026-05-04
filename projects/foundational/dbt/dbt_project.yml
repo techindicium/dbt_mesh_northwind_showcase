@@ -2,6 +2,10 @@ name: 'dbt_nothwind_mesh_foundational'
 version: '1.0.0'
 config-version: 2
 
+dbt-cloud: 
+  project-id: 448668
+  defer-env-id: 447525
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
