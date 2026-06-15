@@ -1,9 +1,11 @@
-name: 'dbt_nothwind_mesh_foundational'
+name: 'dbt_data'
 version: '1.0.0'
 config-version: 2
+dbt-cloud:
+  project-id: 548606
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'default'
+profile: 'dbt_data'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -21,12 +23,27 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+
 models:
-  dbt_nothwind_mesh_foundational:
+  dbt_data:
+    +static_analysis: strict
+    audit_helper:
+      +static_analysis: off
+      +enabled: "{{ target.name in ('audit_helper', 'dev') }}"
+
+    intermediate:
+      +materialized: view
+      +schema: int
+
+    marts:
+      +materialized: table
+      +schema: marts
 
     staging:
       +materialized: view
       +schema: stg
-      +access: public
       erp:
         +tags: erp
