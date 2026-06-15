@@ -30,9 +30,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_regulated_data:
     +static_analysis: strict
-    audit_helper:
-      +static_analysis: off
-      +enabled: "{{ target.name in ('audit_helper', 'dev') }}"
 
     intermediate:
       +materialized: view
