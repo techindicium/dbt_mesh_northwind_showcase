@@ -1,9 +1,15 @@
 models:
-  - name: fct_sales
-    description: Fact model with sales data and metrics.
+  - name: int_order_items__metrics
+    description: Intermediate model that joins order items with orders to calculate financial metrics and enrich with delivery details.
     columns:
       - name: order_item_sk
-        description: Primary key of fct_sales model.
+        description: Unique identifier for each item in an order.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_fk
+        description: Foreign key referencing the order header associated with the line item.
 
       - name: product_fk
         description: Foreign key referencing the product.
@@ -34,9 +40,6 @@ models:
 
       - name: quantity
         description: Quantity of the product ordered.
-
-      - name: freight
-        description: Total freight cost for the order.
 
       - name: gross_total
         description: Total amount before discount for the order item (unit price * quantity).
