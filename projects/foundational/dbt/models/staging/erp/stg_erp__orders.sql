@@ -1,14 +1,13 @@
 with
     source_orders as (
         select *
-        from {{ source('erp', 'orders') }}
+        from {{ ref('orders') }}
     )
 
     , renamed as (
         select
             cast(id as int) as order_pk
             , cast(employeeid as int) as employee_fk
-            , cast(customerid as string) as customer_fk
             , cast(shipvia as int) as shipper_fk
             , cast(id as int) as order_number
             , cast(orderdate as date) as order_date
