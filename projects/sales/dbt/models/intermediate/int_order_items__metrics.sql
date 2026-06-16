@@ -15,7 +15,6 @@ with
             , order_items.order_fk
             , order_items.product_fk
             , orders.employee_fk
-            , orders.customer_fk
             , orders.shipper_fk
             , orders.order_date
             , orders.ship_date
@@ -39,7 +38,6 @@ with
             , order_fk
             , product_fk
             , employee_fk
-            , customer_fk
             , shipper_fk
             , order_date
             , ship_date

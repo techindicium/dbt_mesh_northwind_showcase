@@ -25,7 +25,6 @@ select
     orders.order_pk
     , orders.order_number
     , orders.employee_fk
-    , orders.customer_fk
     , orders.shipper_fk
     , orders.order_date
     , orders.ship_date
