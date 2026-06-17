@@ -1,6 +1,8 @@
 models:
   - name: int_customers__total_spendings
     description: Exposes how much each customer has spent across all orders.
+    config:
+      access: public
     columns:
       - name: customer_id
         description: Unique identifier for each customer.
