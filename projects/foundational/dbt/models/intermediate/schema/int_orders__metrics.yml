@@ -1,6 +1,8 @@
 models:
   - name: int_orders__metrics
     description: Aggregates order header information with totals derived from the transaction grain.
+    config:
+      access: public
     columns:
       - name: order_pk
         description: Unique identifier for each order.
