@@ -21,9 +21,6 @@ models:
       - name: employee_fk
         description: Foreign key referencing the employee responsible for the order.
 
-      - name: customer_fk
-        description: Foreign key referencing the customer who placed the order.
-
       - name: shipper_fk
         description: Foreign key referencing the shipper used for delivery.
 
