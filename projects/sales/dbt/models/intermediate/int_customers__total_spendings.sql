@@ -1,7 +1,7 @@
 with
-    orders_metrics as (
+    order_items_metrics as (
         select *
-        from {{ ref('int_orders__metrics') }}
+        from {{ ref('dbt_data', 'int_order_items__metrics') }}
     ),
 
     customers_orders_bridge as (
