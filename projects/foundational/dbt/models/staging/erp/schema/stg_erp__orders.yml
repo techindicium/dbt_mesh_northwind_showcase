@@ -3,6 +3,8 @@ version: 2
 models:
   - name: stg_erp__orders
     description: Cleansed order headers with consistent naming for downstream facts.
+    config:
+      access: public
     columns:
       - name: order_pk
         description: Natural primary key coming from the ERP orders table.
