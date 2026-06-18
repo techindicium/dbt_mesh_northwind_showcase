@@ -3,6 +3,8 @@ version: 2
 models:
   - name: stg_erp__orders
     description: Cleansed order headers with consistent naming for downstream facts.
+    config:
+      access: public
     columns:
       - name: order_pk
         description: Natural primary key coming from the ERP orders table.
@@ -11,8 +13,6 @@ models:
           - not_null
       - name: employee_fk
         description: Reference to the employee who captured the order.
-      - name: customer_fk
-        description: Reference to the customer who placed the order.
       - name: shipper_fk
         description: Reference to the shipper selected for fulfillment.
       - name: order_number

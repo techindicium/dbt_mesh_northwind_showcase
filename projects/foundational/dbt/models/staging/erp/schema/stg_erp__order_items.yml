@@ -3,6 +3,8 @@ version: 2
 models:
   - name: stg_erp__order_items
     description: Order line grain dataset with typed metrics derived from the ERP detail line table.
+    config:
+      access: public
     columns:
       - name: order_item_sk
         description: Surrogate primary key representing an order line.

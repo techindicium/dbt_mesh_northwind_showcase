@@ -1,7 +1,7 @@
 with
     source_shippers as (
         select *
-        from {{ source('erp', 'shippers') }}
+        from {{ ref('shippers') }}
     )
 
     , renamed as (

@@ -1,6 +1,10 @@
 models:
   - name: int_order_items__metrics
     description: Intermediate model that joins order items with orders to calculate financial metrics and enrich with delivery details.
+    config:
+      access: public
+      contract:
+        enforced: true
     columns:
       - name: order_item_sk
         description: Unique identifier for each item in an order.
@@ -16,9 +20,6 @@ models:
 
       - name: employee_fk
         description: Foreign key referencing the employee responsible for the order.
-
-      - name: customer_fk
-        description: Foreign key referencing the customer who placed the order.
 
       - name: shipper_fk
         description: Foreign key referencing the shipper used for delivery.

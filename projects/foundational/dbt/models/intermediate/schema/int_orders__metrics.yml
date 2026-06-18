@@ -1,6 +1,8 @@
 models:
   - name: int_orders__metrics
     description: Aggregates order header information with totals derived from the transaction grain.
+    config:
+      access: public
     columns:
       - name: order_pk
         description: Unique identifier for each order.
@@ -13,9 +15,6 @@ models:
 
       - name: employee_fk
         description: Foreign key referencing the employee who captured the order.
-
-      - name: customer_fk
-        description: Foreign key referencing the customer who placed the order.
 
       - name: shipper_fk
         description: Foreign key referencing the shipper used for fulfillment.
