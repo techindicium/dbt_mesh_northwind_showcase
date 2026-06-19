@@ -3,6 +3,8 @@ models:
     description: Intermediate model that joins order items with orders to calculate financial metrics and enrich with delivery details.
     config:
       access: public
+      contract:
+        enforced: true
     columns:
       - name: order_item_sk
         description: Unique identifier for each item in an order.
