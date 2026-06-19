@@ -1,13 +1,12 @@
-version: 2
 
 models:
-  - name: stg_erp__order_customer_bridge
+  - name: stg_erp__customers_orders_bridge
     description: Regulated model bridging customer and order data.
     columns:
-      - name: order_id
+      - name: order_pk
         description: Order identifier coming from the orders staging model.
         data_tests:
           - unique
           - not_null
-      - name: customer_id
+      - name: customer_fk
         description: Customer identifier coming from the orders staging model.

@@ -6,8 +6,8 @@ with
 
     , renamed as (
         select
-            cast(ORDERID as int) as order_id
-            , cast(CUSTOMERID as varchar) as customer_id
+            cast(orderid as int) as order_pk
+            , cast(customerid as varchar) as customer_fk
         from source_bridge_customers_orders
     )
 

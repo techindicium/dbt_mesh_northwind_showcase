@@ -2,6 +2,9 @@ name: 'dbt_regulated_data'
 version: '1.0.0'
 config-version: 2
 
+dbt-cloud:
+  project-id: 448671
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'dbt_regulated_data'
 
@@ -34,7 +37,7 @@ models:
       +schema: int
 
     staging:
-      +materialized: view
+      +materialized: table
       +schema: stg
       erp:
         +tags: erp

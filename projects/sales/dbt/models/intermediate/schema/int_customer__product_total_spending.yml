@@ -1,0 +1,26 @@
+models:
+  - name: int_customer__product_total_spending
+    description: Exposes how much each customer has spent across all orders.
+    config:
+      access: public
+      contract:
+        enforced: true
+    columns:
+      - name: customer_product_pk
+        description: Surrogate key generated from customer_fk and product_fk, unique per customer-product pair.
+        data_type: varchar
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_fk
+        description: Foreign key to customer.
+        data_type: varchar
+
+      - name: product_fk
+        description: Foreign key to product.
+        data_type: int
+
+      - name: total_gross_spending
+        description: Total gross amount each customer has spent on each product across all orders.
+        data_type: number(38,2)
